@@ -1,6 +1,5 @@
 from algorithms import (iterative_binary_search, recursive_binary_search, sequential_search)
 
-print("Test")
 
 def main():
 
@@ -13,6 +12,7 @@ def main():
     index = recursive_binary_search(values, present_target, 0, len(values) - 1)
     
     print(f"{index}")
+    print(f"Recursive Binary Search: Target {present_target} found at index {index}")
 
 if __name__ == "__main__":
     main()

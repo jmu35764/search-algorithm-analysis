@@ -1,7 +1,8 @@
-from algorithms import (iterative_binary_search, recursive_binary_search, sequential_search)
 import unittest
+from algorithms import (iterative_binary_search, recursive_binary_search, sequential_search)
 
-class Test_Phase_1(unittest.TesetCase):
+
+class Test_Phase_1(unittest.TestCase):
     def test_iterative_binary_search(self):
         values = [3, 5, 8, 12, 14, 18, 21]
         values.sort()

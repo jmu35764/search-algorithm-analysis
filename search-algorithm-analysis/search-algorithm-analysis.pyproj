@@ -4,13 +4,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>97443edf-657d-4ced-8b74-1ef94979cacb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Tests\Test_main_phase_1.py</StartupFile>
+    <StartupFile>phase_1_basic_testing\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>search-algorithm-analysis</Name>
     <RootNamespace>search-algorithm-analysis</RootNamespace>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +32,8 @@
     <Compile Include="phase_3_runtime_analysis\__init__.py" />
     <Compile Include="algorithms.py" />
     <Compile Include="search_algorithm_analysis.py" />
-    <Compile Include="Tests\Test_main_phase_1.py" />
+    <Compile Include="Tests\test_main_phase_1.py" />
+    <Compile Include="Tests\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests\" />
