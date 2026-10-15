@@ -52,7 +52,7 @@ class Test_Phase_1(unittest.TestCase):
         index_present = iterative_binary_search(values, present_target)
         self.assertEqual(index_present, 2)
 
-def test_recursive_binary_search(self):
+    def test_recursive_binary_search(self):
         values = [3, 5, 8, 12, 14, 18, 21]
         values.sort()
         present_target = 12
