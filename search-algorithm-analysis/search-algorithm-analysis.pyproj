@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>97443edf-657d-4ced-8b74-1ef94979cacb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>search_algorithm_analysis.py</StartupFile>
+    <StartupFile>Tests\Test_main_phase_1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,10 +27,12 @@
     <Compile Include="phase_2_randomized_testing\__init__.py" />
     <Compile Include="phase_3_runtime_analysis\main.py" />
     <Compile Include="phase_3_runtime_analysis\__init__.py" />
-    <Compile Include="search_algorithms.py" />
+    <Compile Include="algorithms.py" />
     <Compile Include="search_algorithm_analysis.py" />
+    <Compile Include="Tests\Test_main_phase_1.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Tests\" />
     <Folder Include="report\" />
     <Folder Include="phase_3_runtime_analysis\" />
     <Folder Include="phase_2_randomized_testing\" />
