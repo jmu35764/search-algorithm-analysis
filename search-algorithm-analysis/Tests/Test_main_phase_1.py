@@ -13,6 +13,20 @@ class Test_Phase_1(unittest.TestCase):
         self.assertEqual(index_present, 3)
         self.assertEqual(index_absent, -1)
 
+    def test_ibs_first_element(self):
+        values = [3, 5, 8, 12, 14, 18, 21]
+        values.sort()
+        present_target = 3
+        index_present = iterative_binary_search(values, present_target)
+        self.assertEqual(index_present, 0)
+
+     def test_ibs_last_element(self):
+        values = [3, 5, 8, 12, 14, 18, 21]
+        values.sort()
+        present_target = 21
+        index_present = iterative_binary_search(values, present_target)
+        self.assertEqual(index_present, 6)
+
 
 if __name__ == '__main__':
     unittest.main()
