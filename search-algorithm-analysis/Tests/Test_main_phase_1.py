@@ -39,12 +39,18 @@ class Test_Phase_1(unittest.TestCase):
         index_absent = iterative_binary_search(values, absent_target)
         self.assertEqual(index_absent, -1)
 
-    def test_obs_empty_list(self):
+    def test_ibs_empty_list(self):
         values = []
         absent_target = 9
         index_absent = iterative_binary_search(values, absent_target)
         self.assertEqual(index_absent, -1)
 
+    def test_ibs_duplicate_elements(self):
+        values = [3, 5, 8, 8, 12, 14, 18, 21]
+        values.sort()
+        present_target = 8
+        index_present = iterative_binary_search(values, present_target)
+        self.assertEqual(index_present, 2)
 
 if __name__ == '__main__':
     unittest.main()
