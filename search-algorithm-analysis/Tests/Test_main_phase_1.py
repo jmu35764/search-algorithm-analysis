@@ -27,6 +27,19 @@ class Test_Phase_1(unittest.TestCase):
         index_present = iterative_binary_search(values, present_target)
         self.assertEqual(index_present, 6)
 
+    def test_ibs_one_element_present(self):
+        values = [3]
+        present_target = 3
+        index_present = iterative_binary_search(values, present_target)
+        self.assertEqual(index_present, 0)
+
+    def test_ibs_one_element_absent(self):
+        values = [3]
+        absent_target = 9
+        index_absent = iterative_binary_search(values, absent_target)
+        self.assertEqual(index_absent, -1)
+
+
 
 if __name__ == '__main__':
     unittest.main()
