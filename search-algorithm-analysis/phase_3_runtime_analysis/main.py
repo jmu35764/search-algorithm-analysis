@@ -1,6 +1,7 @@
 import unittest
 import random
 import time
+import statistics
 from algorithms import (iterative_binary_search, recursive_binary_search, sequential_search)
 
 def main():
@@ -18,21 +19,25 @@ def main():
                 target = random.choice(values)
             else:
                 target = 1_000_001  # Ensure the target is not present in the list
-
-            start = time.perf_counter()
-            index = iterative_binary_search(values, target)
-            elapsed_microseconds = (time.perf_counter() - start) * 1_000_000
-            ibs_times.append(elapsed_microseconds)
-
-            #print(f"Iterative Binary Search: Size {size}, Target {target}, Index {index}, Time {elapsed_microseconds:.2f} microseconds")
-
+          
+            start = 0
             start = time.perf_counter()
             index = recursive_binary_search(values, target, 0, len(values) - 1)
             elapsed_microseconds = (time.perf_counter() - start) * 1_000_000
             rbs_times.append(elapsed_microseconds)
-
+                
+                
+            #print(f"Iterative Binary Search: Size {size}, Target {target}, Index {index}, Time {elapsed_microseconds:.2f} microseconds")                
+                
+            start = 0
+            start = time.perf_counter()
+            index = iterative_binary_search(values, target)
+            elapsed_microseconds = (time.perf_counter() - start) * 1_000_000
+            ibs_times.append(elapsed_microseconds)    
+                 
             #print(f"Recursive Binary Search: Size {size}, Target {target}, Index {index}, Time {elapsed_microseconds:.2f} microseconds")
 
+            start = 0
             start = time.perf_counter()
             index = sequential_search(values, target)
             elapsed_microseconds = (time.perf_counter() - start) * 1_000_000
@@ -40,9 +45,10 @@ def main():
 
             #print(f"Sequential Search: Size {size}, Target {target}, Index {index}, Time {elapsed_microseconds:.2f} microseconds \n")
 
-        print(f"Iterative Binary Search Times (microseconds): {ibs_times}")
-        print(f"Recursive Binary Search Times (microseconds): {rbs_times}")
-        print(f"Sequential Search Times (microseconds): {ss_times}")
+        print(f"Data Size: {size}")
+        print(f"Recursive Binary Search Median (microseconds): {statistics.median(rbs_times):.2f} \n")
+        print(f"Iterative Binary Search Median (microseconds): {statistics.median(ibs_times):.2f} \n")
+        print(f"Sequential Search Median (microseconds): {statistics.median(ss_times):.2f} \n")
 
         ibs_times.clear()
         rbs_times.clear()
