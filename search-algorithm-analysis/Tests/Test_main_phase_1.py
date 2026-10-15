@@ -39,6 +39,11 @@ class Test_Phase_1(unittest.TestCase):
         index_absent = iterative_binary_search(values, absent_target)
         self.assertEqual(index_absent, -1)
 
+    def test_obs_empty_list(self):
+        values = []
+        absent_target = 9
+        index_absent = iterative_binary_search(values, absent_target)
+        self.assertEqual(index_absent, -1)
 
 
 if __name__ == '__main__':
