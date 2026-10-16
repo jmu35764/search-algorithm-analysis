@@ -7,9 +7,15 @@ def main():
 
     # Generate a large sorted list of random integers for testing
     values = [random.randint(1, 100) for _ in range(20)]
+    
+    # Sort the values before running the algorithms
     values.sort()
+
+    # Randomly decide whether to test with a present or absent target
+    # Give the random value a name so it can be printed for debugging purposes
     random_num = random.random()
-    if random_num < 0.5:
+
+    if random_num < 0.5: # 50% chance to test with a present target
         target = random.choice(values)
         expected_to_be_present = True
     else:

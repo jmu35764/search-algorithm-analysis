@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>97443edf-657d-4ced-8b74-1ef94979cacb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>phase_3_runtime_analysis\main.py</StartupFile>
+    <StartupFile>phase_2_randomized_testing\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
